@@ -1,0 +1,74 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-transform: capitalize;
+    font-family: "Roboto", sans-serif;
+}
+
+body {
+    background-color: black;
+    padding: 0px 0.8rem;
+}
+
+ .container {
+    width: 80%;
+    margin: 50px auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1.3rem;
+    background-color: rgb(37, 36, 36);
+    padding: 1.2rem 12px;
+    border-radius: 12px;
+
+}
+
+h2 {
+    color: seashell;
+}
+
+.faq {
+    padding: 1rem 1.2rem;
+    padding-bottom: 1rem;
+    border-bottom: 2px solid white;
+    color: white;
+    font-size: 1.3rem;
+    cursor: pointer;
+    transition: all 0.4s;
+}
+
+.faq .question {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.question img {
+    width: 30px;
+    aspect-ratio: 1;
+}
+
+.ans{
+    max-height: 0;
+    overflow: hidden;
+}
+.faq.active .ans{
+    max-height: 200px;
+    transition: all 0.6s ease;
+    
+}
+.faq.active img{
+    transform: rotate(180deg);
+    transition: all 0.5s ease;
+    
+}
+
+@media screen and (max-width:576px) {
+    .container{
+        width: 100%;
+        padding: 1.2rem 13px;
+    }
+}
